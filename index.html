@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <img src="images/404-tick.png" alt="">
+            <h2>Thank you! </h2>
+            <p>Your details has been submitted succesfully
+                <div class="credit">
+                    <h5><a href="https://github.com/anandhunv">&copy;anandhu.n.v</a></h5>
+                  </div>
+            </p>
+            <button type="submit" onclick="closePopup()">OK</button>
+        </div>
+
+    </div>
+
+
+
+<!-- Javascript -->
+
+    <script>
+            let popup=document.getElementById("popup");
+            function openPopup(){
+                //top scale and visiblity are modified in css so we have to change that properties
+                popup.classList.add("open-popup");
+
+            }
+
+            function closePopup(){
+                popup.classList.remove("open-popup");
+
+            }
+
+    </script>
+</body>
+</html>
